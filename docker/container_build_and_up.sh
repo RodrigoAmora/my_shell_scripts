@@ -1,6 +1,5 @@
 #!/bin/bash
 
-docker-compose build
+sudo docker-compose build
 
-docker-compose up -d
-
+sudo docker-compose up -d

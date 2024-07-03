@@ -21,5 +21,3 @@ echo -e "\n\n\n";
 echo -e "\033[01;32m#######################\033[01;32m"
 echo -e "\n\n";
 keytool -list -v -keystore $directoryKeyStore -alias $alias -storepass $storePasss -keypass $keyPass
-echo -e "\n\n";
-echo -e "\033[01;32m#######################\033[01;32m"

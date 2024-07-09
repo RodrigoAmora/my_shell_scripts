@@ -9,5 +9,6 @@ echo "Type your username: ";
 read user_name;
 
 rm -rf /home/$user_name/.docker/config.json
-cp config.json /home/$user_name/.docker/config.json
 
+BASEDIR=$(dirname "$0")
+cp $BASEDIR/config.json /home/$user_name/.docker/config.json

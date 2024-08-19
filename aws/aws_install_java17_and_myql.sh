@@ -1,9 +1,9 @@
 #!/bin/bash
 
-################################################################
-## Shellscript to install oJava 17, Maven, MySQL and AWS CLI  ##
-## into EC2 that will receive the application.                ##
-################################################################
+########################################################################
+## Shellscript to install Java 17, Maven, MySQL, Jenkins and AWS CLI  ##
+## into EC2 that will receive the application.                        ##
+########################################################################
 
 
 
@@ -29,7 +29,7 @@ echo -e "\033[01;32m### Installing Maven ####\033[01;32m"
 echo -e "\033[01;32m#########################\033[01;32m"
 echo -e "\n\n\n"
 
-sudo sudo apt install -y maven
+sudo sudo yum install -y maven
 
 #########################################################
 
@@ -39,12 +39,15 @@ echo -e "\033[01;32m### Installing Jenkins ####\033[01;32m"
 echo -e "\033[01;32m###########################\033[01;32m"
 echo -e "\n\n\n"
 
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+sudo yum update
 
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
-sudo apt-get update
-sudo apt-get install jenkins -y
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+sudo yum install jenkins -y
+
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 
@@ -57,8 +60,11 @@ echo -e "\033[01;32m###########################\033[01;32m"
 echo -e "\n\n\n"
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-sudo apt install -y unzip
+
+sudo yum install -y unzip
+
 unzip awscliv2.zip
+
 sudo ./aws/install
 
 #########################################################

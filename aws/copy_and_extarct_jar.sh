@@ -4,7 +4,6 @@ echo "Type name of .jar: "
 read nameJar;
 
 if ! [[ $nameJar =~ ".jar" ]]; then
-	echo "jhdvhhgu";
   	nameJar+=".jar";
 fi
 

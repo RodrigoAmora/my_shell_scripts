@@ -1,5 +1,6 @@
 #!/bin/bash
 
-sudo docker-compose build
+### Shellscript to up Docker's containers ###
 
+sudo docker-compose build
 sudo docker-compose up -d

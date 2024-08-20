@@ -9,7 +9,7 @@
 
 #########################################################
 
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8090
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8081
 
 #########################################################
 
@@ -30,26 +30,6 @@ echo -e "\033[01;32m#########################\033[01;32m"
 echo -e "\n\n\n"
 
 sudo sudo yum install -y maven
-
-#########################################################
-
-echo -e "\n\n\n"
-echo -e "\033[01;32m###########################\033[01;32m"
-echo -e "\033[01;32m### Installing Jenkins ####\033[01;32m"
-echo -e "\033[01;32m###########################\033[01;32m"
-echo -e "\n\n\n"
-
-sudo yum update
-
-sudo wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/redhat-stable/jenkins.repo
-
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-
-sudo yum install jenkins -y
-
-sudo systemctl enable jenkins
-sudo systemctl start jenkins
 
 #########################################################
 

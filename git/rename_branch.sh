@@ -1,18 +1,18 @@
 #!/bin/bash
 
-echo "Type old name branch: ";
-read oldNameBranch;
+#####################################
+## Shell script to rename a branch ##
+#####################################
+
+echo "Type current name branch: ";
+read currentNameBranch
 
 echo "Type new name branch: ";
-read newNameBranch;
+read newNameBranch
 
-git branch -m oldNameBranch newNameBranch
 
+git branch -m $currentNameBranch $newNameBranch
 git fetch origin
-
-git branch -u origin/newNameBranch newNameBranch
-
+git branch -u origin/$newNameBranch $newNameBranch
 git remote set-head origin -a
-
 git remote prune origin
-

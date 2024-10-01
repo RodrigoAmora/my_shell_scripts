@@ -1,8 +1,12 @@
 #!/bin/bash
 
-#########################################################
-## Shell script to do backup of a database on MongoDB ##
-#########################################################
+
+################################################################
+## Shell script to do backup of a database on MongoDB         ##
+## You should Download MongoDB Relational Migrator.           ##
+## Link: https://mongodb.com/try/download/relational-migrator ##
+################################################################
+
 
 echo "Type hostname: "
 read hostname

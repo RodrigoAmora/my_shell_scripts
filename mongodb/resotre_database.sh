@@ -1,11 +1,14 @@
 #!/bin/bahs
 
 
-################################################################
-## Shell script to resotre of a database on MongoDB.          ##
-## You should Download MongoDB Relational Migrator.           ##
-## Link: https://mongodb.com/try/download/relational-migrator ##
-################################################################
+###################################################################
+## Shell script to resotre of a database on MongoDB.             ##
+## You should Download Mongo Tools.                              ##
+## Link: https://www.mongodb.com/try/download/database-tools     ##
+##                                                               ## 
+## After download Mongo Tools, configure the enviroment variable ##
+## MONGO_TOOLS into your nachine <mongo_toole_directory/bin>     ##
+###################################################################
 
 echo "Enter hostname: "
 read hostname
@@ -31,11 +34,11 @@ echo "Enter the directory where the backup is: "
 read backup_directory
 
 
-mongorestore --uri $hostname $backup_directory
+#mongorestore --uri $hostname $backup_directory
 
 mongorestore \
    --host=$hostname \
    --port=$port \
    --username=$username \
    --authenticationDatabase=admin \
-   /opt/backup/mongodump-1
+   $backup_directory

@@ -4,6 +4,14 @@
 ## Shell script to do backup of a database on MySQL ##
 ######################################################
 
-db_name="mydb"
+echo "Enter username: "
+read username
+
+echo "Enter password: "
+read password
+
+echo "Enter database name: "
+read db_name
+
 backup_file="backup.sql"
-mysqldump -u username -p$password "$db_name" > "$backup_file"
+mysqldump -u $username -p $password $db_name > "$backup_file"

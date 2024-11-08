@@ -1,24 +1,43 @@
 #!/bin/bash
 
-echo "Type the path of the your file of .keystore: "
-read directoryKeyStore;
+###################################
+## Shell script to generate SHA1 ##
+###################################
 
-echo "Type your alias: ";
-read alias;
+echo "Choose an option:"
+echo "1) Get SHA1 Debug"
+echo "2) Get SHA1 from keystore"
+echo -e "\n\n"
+echo "Type your choise: "
+read number
 
-echo "Type your sotre pass: ";
-read storePasss;
+if [ $number -eq 1 ]
+then
+	echo -e "\n\n";
+	echo -e "\033[01;32m#######################\033[01;32m"
+	echo -e "\033[01;32m### SHA1 generated! ###\033[01;32m"
+	echo -e "\033[01;32m#######################\033[01;32m"
+	echo -e "\n\n";
 
-echo "Type your key pass: ";
-read keyPass;
+	keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+else
+	echo "Type the path of the your file of .keystore: "
+	read directoryKeyStore;
 
-echo -e "\n\n\n";
-echo -e "\033[01;32m#######################\033[01;32m"
-echo -e "\033[01;32m### SHA1 generated! ###\033[01;32m"
-echo -e "\033[01;32m#######################\033[01;32m"
-echo -e "\n\n\n";
+	echo "Type your alias: ";
+	read alias;
 
-echo -e "\033[01;32m#######################\033[01;32m"
-echo -e "\n\n";
+	echo "Type your sotre pass: ";
+	read storePasss;
 
-keytool -list -v -keystore $directoryKeyStore -alias $alias -storepass $storePasss -keypass $keyPass
+	echo "Type your key pass: ";
+	read keyPass;
+
+	echo -e "\n\n";
+	echo -e "\033[01;32m#######################\033[01;32m"
+	echo -e "\033[01;32m### SHA1 generated! ###\033[01;32m"
+	echo -e "\033[01;32m#######################\033[01;32m"
+	echo -e "\n\n";
+
+	keytool -list -v -keystore $directoryKeyStore -alias $alias -storepass $storePasss -keypass $keyPass
+fi

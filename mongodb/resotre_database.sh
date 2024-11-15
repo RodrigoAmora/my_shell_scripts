@@ -34,6 +34,8 @@ echo "Enter the directory where the backup is: "
 read backup_directory
 
 
+source ~/.bash_profile
+
 #mongorestore --uri $hostname $backup_directory
 
 mongorestore \

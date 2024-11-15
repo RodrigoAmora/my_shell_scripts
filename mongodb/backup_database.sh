@@ -29,6 +29,8 @@ echo -e "\n"
 echo "Type the output directory: "
 read output_directory
 
+source ~/.bash_profile
+
 cd $MONGO_TOOLS_HOME/bin
 
 mongodump --host $hostname --port $port --db $database_name --out $output_directory

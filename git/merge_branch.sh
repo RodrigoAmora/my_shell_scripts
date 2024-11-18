@@ -3,7 +3,8 @@
 echo "Type name branch: ";
 read nameBranch
 
+git fetch
 git checkout develop
-git pull origin develop
+git pull
 git checkout $nameBranch
 git merge

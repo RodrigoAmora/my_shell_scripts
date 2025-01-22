@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#############################################
+## Shell script to create a topic on Kafka ##
+#############################################
 
 echo "Enter Kafka's directory: "
 read kafkaDirectory

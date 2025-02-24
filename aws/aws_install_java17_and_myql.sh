@@ -5,7 +5,7 @@
 ## into EC2 that will receive the application.                        ##
 ########################################################################
 
-
+sudo yum update -y
 
 #########################################################
 
@@ -15,7 +15,7 @@ echo -e "\033[01;32m#############################\033[01;32m"
 echo -e "\n\n"
 
 sudo yum install iptables
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8081
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8081
 
 #########################################################
 

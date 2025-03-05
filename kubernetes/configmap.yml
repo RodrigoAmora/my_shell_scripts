@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  MONGO_URL: mongodb://mongo-nodeport-svc/person
+  REDIS_URL: redis-nodeport-svc
+
+
+# No arquivo Dockerfile colocar as linhas:
+# MONGO_URL = ""
+# REDIS_URL = ""

@@ -1,8 +1,0 @@
-#!/bin/bash
-
-export AWS_SECRET_ACCESS_KEY=AKIAXYKJQC66VKYR5MT3
-export AWS_ACCESS_KEY_ID=wEAmQ+L0CpLBsh6GBO7DgRyRbmhT6nO6L+Ry65nW
-
-terraform init
-terraform apply -var "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"
-#terraform apply -var "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID"

@@ -4,6 +4,9 @@
 ### Shellscript to run Pods and Service on Kubernetes ###
 #########################################################
 
+kubectl apply -f opaque.yml
+kubectl get secrets # Lista os Secrets
+
 echo -e "\033[01;32m#############################\033[01;32m"
 echo -e "\033[01;32m### Running ConfigMap.... ###\033[01;32m"
 echo -e "\033[01;32m#############################\033[01;32m"
@@ -11,7 +14,7 @@ echo -e "\n\n"
 
 kubectl apply -f configmap.yml
 
-kubectl get cm
+kubectl get cm # Lista os ConfigMaps
 
 #####
 

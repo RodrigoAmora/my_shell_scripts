@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: fiap-opaque
+type: Opaque
+string-data:
+  URL_IMAGEM: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-original.svg'
+data:
+  username: jdghugcudfegyuicg
+  password: hduhueghgiuiygygu

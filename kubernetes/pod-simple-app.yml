@@ -11,13 +11,18 @@ spec:
     ports:
     - containerPort: 3000
     env:
+      - name: URL_IMAGEM
+        valueFrom:
+          secretKeyRef:
+            name: opaque-secret-image
+            key: URL_IMAGEM
       - name: MONGO_URL
-        valueForm:
+        valueFrom:
           configMapKeyRef:
             name: db-config
             key: MONGO_URL
       - name: REDIS_URL
-        valueForm:
+        valueFrom:
           configMapKeyRef:
             name: db-config
             key: REDIS_URL

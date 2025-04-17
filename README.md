@@ -1,9 +1,9 @@
 # my_shellscripts
-Description:
-----------
+Description
+-----------
 Shell scripts that I created to facilitate my day by day.
 
-Author:
+Author
 ------
 <b>Rodrigo Amora</b>
 

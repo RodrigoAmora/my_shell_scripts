@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #################################
-## Shell script to connect ssh ##
+## Shell script to connect SSH ##
 #################################
 
 echo "Enter the SSH key path: ";

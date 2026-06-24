@@ -12,11 +12,11 @@ read storePasss;
 echo "Type your key pass: ";
 read keyPass;
 
-echo -e "\n\n\n";
+echo -e "\n\n";
 echo -e "\033[01;32m#######################\033[01;32m"
 echo -e "\033[01;32m### SHA1 generated! ###\033[01;32m"
 echo -e "\033[01;32m#######################\033[01;32m"
-echo -e "\n\n\n";
+echo -e "\n\n";
 
 echo -e "\033[01;32m#######################\033[01;32m"
 echo -e "\n\n";
